@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function operation(a,b) {
+
+ selectElement = document.querySelector('#option');
+        chosenvalue = selectElement.value;
+		console.log("chosenvalue--"+chosenvalue);
+			 if(chosenvalue=="A"){
+				result=Number(a)+Number(b);
+			 }else if(chosenvalue=="S"){
+				result=Number(a)-Number(b);
+			 }
+			 else if(chosenvalue=="M"){
+				result=Number(a)*Number(b);
+			 }else{
+				result=Number(a)/Number(b);
+			 }
+ document.getElementById("output").innerHTML = "Result------" + result;
+}
+</script>
+</head>
+<body>
+<h2> Calculator</h2>
+
+<div class="container">
+					<label for="uname">
+						<b>Enter Number (a)</b>
+					</label>
+					<input id="a" type="number"  name="uname" >
+					<label for="psw">
+						<b>Enter Number (b)</b>
+					</label>
+					<input type="number" id="b" name="psw" >
+					<label for="psw">
+						<b>Operations</b>
+					</label>
+					<select id="option" name="option">
+					  <option value="A">Add</option>
+					  <option value="S">Sub</option>
+					  <option value="M">Mul</option>
+					  <option value="D">Div</option>
+   
+					</select>
+					<button type="submit" onclick="operation(document.getElementById('a').value,document.getElementById('b').value)">Calculate</button>
+			
+						<p id="output" style="font-size:30px;color:green;margin-left:10%;"/>
+					
+					</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         
+        <!-- CSS property to place div
+            side by side -->
+        <link rel="stylesheet" href="login.css"> 
+		
+		<script>
+		
+		function validateCredentials() {
+			var username = document.getElementById("name").value;
+			userexist=false;
+			var employees =["Sunil","Kalvir","Kamat"];
+		for (var index=0;index<employees.length;index++){
+	
+				if (username==employees[index]){
+				userexist=true;
+				document.getElementById("output").innerHTML = "";
+				window.location.replace("redirect2.html");
+				break;
+				}
+			}
+	if(!userexist){
+		document.getElementById("output").innerHTML = "Invalid User";
+	}
+}
+ 
+</script>
+    </head>
+     
+    <body>
+
+        <div id = "boxes">
+            <h1>CBG Training</h1>
+             
+            <div id = "leftbox">
+               <img src="login.png" alt="login"/>
+            </div>
+             
+           
+             
+            <div id = "rightbox">
+                   <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input id="name" type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" onclick="validateCredentials()">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+	<p id="output"></p>
+  </div>
+
+            </div>
+        </div>
+    </body>
+</html>

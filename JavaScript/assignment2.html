@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function search() {
+
+ var empId=document.getElementById("eid").value;
+
+ var e1= {id:100,name:'sunil',email:'sunil@gmail.com',phone:'578875',department:'Software'};
+ var e2= {id:101,name:'kalvir',email:'kalvir@gmail.com',phone:'5748875',department:'Software'};
+ var e3= {id:102,name:'kamat',email:'kamat@gmail.com',phone:'5788475',department:'Software'};
+ var e4= {id:103,name:'dembo',email:'dembo@gmail.com',phone:'5788675',department:'Software'};
+ 
+	var eList=[];
+			eList.push(e1);
+			eList.push(e2);
+			eList.push(e3);
+			eList.push(e4);
+	
+	var userFound=false;
+	
+	
+	for (var i=0;i<eList.length;i++){
+	   object=eList[i];
+
+	  console.log(object.id);
+
+	  if(object.id==empId)
+	  {
+	  document.getElementById("output").innerHTML= "";
+	  console.log("Inside check");
+	  document.getElementById("output").innerHTML= object.id +" " +object.name+" " +object.email;
+	  userFound=true;
+	  break;
+	  }
+	  
+	
+	}
+	userFound==false ?document.getElementById("output").innerHTML= "User Not Found":"";
+
+
+}
+</script>
+</head>
+<body>
+	<h2>Search Users</h2>
+
+	<div class="container">
+		<label for="uname"> <b>Enter Employee ID</b>
+		</label> <input id="eid" type="number" name="uname">
+
+		<button type="submit" onclick="search()">Search</button>
+
+		<p id="output" />
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+  
+  
+function check(a,b) {
+
+ result= Number(a)+Number(b);
+
+ document.getElementById("output").innerHTML = "Result:"+ result;
+
+}
+</script>
+</head>
+<body>
+<h2> Add 2 Numbers</h2>
+
+<div class="container">
+					<label for="uname">
+						<b>Enter Number 1</b>
+					</label>
+					<input id="a" type="text"  name="a" >
+					
+					<label for="psw">
+						<b>Enter Number 2</b>
+					</label>
+					<input id="b" type="text"  name="b" >
+					
+					<button type="submit" onclick="check(document.getElementById('a').value,document.getElementById('b').value)">add</button>
+			
+					<p id="output" style="font-size:30px;color:green;margin-left:10%;"/>
+					</div>
+
+</body>
+</html>

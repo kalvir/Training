@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function check() {
+ var a= document.getElementById("a").value ;
+ console.log("a--"+typeof a);
+ var b= Number(document.getElementById("b").value) ;
+  console.log("b--"+typeof b);
+ selectElement = document.querySelector('#option');
+        chosenvalue = selectElement.value;
+		console.log("chosenvalue--"+chosenvalue);
+ if(chosenvalue=="op1"){
+ document.getElementById("output").innerHTML = "a==b "+(a==b);
+ }else{
+ document.getElementById("output").innerHTML = "a===b "+(a===b);
+ }
+}
+</script>
+</head>
+<body>
+<h2> JavaScript in Head</h2>
+
+<div class="container">
+					<label for="uname">
+						<b>Enter Number (a)</b>
+					</label>
+					<input id="a" type="text"  name="uname" >
+					<label for="psw">
+						<b>Enter Number (b)</b>
+					</label>
+					<input type="number" id="b" name="psw" >
+					<select id="option" name="option">
+					  <option value="op1">a==b</option>
+					  <option value="op2">a===b</option>
+   
+					</select>
+					<button type="submit" onclick="check()">check</button>
+			
+						<p id="output"/>
+					</div>
+
+</body>
+</html>
